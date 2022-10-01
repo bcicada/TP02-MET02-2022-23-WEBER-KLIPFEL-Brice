@@ -1,0 +1,68 @@
+<main>
+    <div class="put-client">
+        <p class="put-client-title">Saisie compte client :</p>
+        <div>
+            <form (ngSubmit)="saveData(exportData)" id="put-client-account" #exportData="ngForm">
+                <div class="input-element">
+                    <label>Nom</label>
+                    <input type="text" name="name" placeholder="La Brocante" [(ngModel)]="FormClientInfo.name" required>
+                </div>
+                <div class="input-element">
+                    <label>Prénom</label>
+                    <input type="text" name="firstname" placeholder="Louis" [(ngModel)]="FormClientInfo.firstname" required>
+                </div>
+                <div class="input-element">
+                    <label>Adresse</label>
+                    <input type="text" name="adress" placeholder="1, Rue des brocanteurs" [(ngModel)]="FormClientInfo.adress" required>
+                </div>
+                <div class="input-element">
+                    <label>Code postal</label>
+                    <input type="text" name="postal" placeholder="67300" [(ngModel)]="FormClientInfo.postal" required>
+                </div>
+                <div class="input-element">
+                    <label>Ville</label>
+                    <input type="text" name="city" placeholder="Schiltigheim" [(ngModel)]="FormClientInfo.city" required>
+                </div>
+                <div class="input-element">
+                    <label>Téléphone</label>
+                    <input type="text" name="phone" placeholder="03 88 00 00 00" [(ngModel)]="FormClientInfo.phone" required>
+                </div>
+                <div class="input-element">
+                    <label>Courriel</label>
+                    <input type="email" name="mail" placeholder="louis.labrocante@exemple.fr" [(ngModel)]="FormClientInfo.mail" required>
+                </div>
+                <div class="input-element">
+                    <label>Civilité</label>
+                    <select type="text" name="civility" [(ngModel)]="FormClientInfo.civility" required>
+                        <option value="" selected disabled>--- Cliquez ici ---</option>
+                        <option value="men">Homme</option>
+                        <option value="women">Femme</option>
+                    </select>
+                </div>
+                <div class="input-element">
+                    <label>Mot de passe</label>
+                    <input type="password" name="password" [(ngModel)]="FormClientInfo.password" required>
+                </div>
+                <div class="input-element">
+                    <label>Pseudonyme</label>
+                    <input type="text" name="username" placeholder="LouisLaBrocante67" [(ngModel)]="FormClientInfo.username" required>
+                </div>
+                <button class="button-submit" type="submit" form="put-client-account">Envoyer</button>
+            </form>
+        </div>
+    </div>
+    <div *ngIf="display">
+        <app-recap-client-info
+        [sendName]="name"
+        [sendFirstname]="firstname"
+        [sendAdress]="adress"
+        [sendPostal]="postal"
+        [sendCity]="city"
+        [sendPhone]="phone"
+        [sendMail]="mail"
+        [sendCivility]="civility"
+        [sendPassword]="password"
+        [sendUsername]="username"
+        ></app-recap-client-info>
+    </div>
+</main>

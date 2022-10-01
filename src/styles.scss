@@ -1,0 +1,20 @@
+// Basic color
+$mainGreen : #50C42C;
+$mainGreen2 : #69D548;
+
+// Fonts
+@font-face {
+    font-family: 'NG B';
+    src: url('assets/fonts/NeuzeitGrotesk-Bold.otf') format('opentype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+::selection {
+    background: $mainGreen2;
+}

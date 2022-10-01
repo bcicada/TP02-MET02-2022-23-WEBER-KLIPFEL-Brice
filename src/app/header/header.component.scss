@@ -1,0 +1,31 @@
+header {
+    display: flex;
+    flex-direction: row;
+    height: 64px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    #header-index {
+        display: flex;
+        flex-direction: row;
+        #header-img {
+            height: 64px;
+        }
+        #header-div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 1rem;
+            #header-title {
+                font-family: 'Trebuchet MS';
+                font-weight: bold;
+                font-size: 30pt;
+                color: #50C42C;
+            }
+            #header-legas {
+                font-family: 'Trebuchet MS';
+                color: #50C42C;
+            }
+        }
+    }
+}
